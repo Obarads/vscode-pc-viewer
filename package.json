@@ -15,6 +15,10 @@
 		"viewer"
 	],
 	"icon": "logo.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Obarads/vscode-pc-viewer.git"
+	},
 	"activationEvents": [
 		"onLanguage:pcd",
 		"onLanguage:ply",
