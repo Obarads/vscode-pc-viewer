@@ -2,7 +2,7 @@
 	"name": "vscode-pc-viewer",
 	"displayName": "vscode-pc-viewer",
 	"description": "Display points of a file.",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"publisher": "obarads",
 	"engines": {
 		"vscode": "^1.44.0"
@@ -29,13 +29,23 @@
 		"languages": [
 			{
 				"id": "ply",
-				"aliases": ["Polygon File Format","ply"],
-				"extensions": [".ply"]
+				"aliases": [
+					"Polygon File Format",
+					"ply"
+				],
+				"extensions": [
+					".ply"
+				]
 			},
 			{
 				"id": "pcd",
-				"aliases": ["point cloud data","pcd"],
-				"extensions": [".pcd"]
+				"aliases": [
+					"point cloud data",
+					"pcd"
+				],
+				"extensions": [
+					".pcd"
+				]
 			}
 		],
 		"configuration": {
