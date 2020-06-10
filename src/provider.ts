@@ -1,15 +1,7 @@
 import * as vscode from "vscode";
 import { Uri } from "vscode";
 import * as path from "path";
-
-function getNonce() {
-  let text = '';
-  const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  for (let i = 0; i < 32; i++) {
-    text += possible.charAt(Math.floor(Math.random() * possible.length));
-  }
-  return text;
-}
+import { getEditorInfo } from './utils';
 
 export class ContentProvider {
   public constructor(private _context: vscode.ExtensionContext, private panel?: vscode.WebviewPanel) { }
@@ -36,34 +28,42 @@ export class ContentProvider {
     //const dply = this.getUri("data", "dolphins.ply");
     //const tex2 = this.getUri("data", "disc.png");
 
+    const { pointMaxSize, bgColor, pointDefaultSize, useGridHelper } = getEditorInfo();
+
     const head =
-    `<head>
-    <title>three.js webgl - PLY</title>
-    <meta charset="utf-8">
-    <style>
-    body {
-        font-family: Monospace;
-        background-color: #0f0;
-        color: #f00;
-        margin: 0px;
-        padding: 0px 0px;
-        overflow: hidden;
-    }
-    </style>
-    </head>`;
+      `<head>
+        <title>three.js webgl - PLY</title>
+        <meta charset="utf-8">
+        <style>
+        body {
+          font-family: Monospace;
+          background-color: #2e2e2e;
+          color: #f00;
+          margin: 0px;
+          padding: 0px 0px;
+          overflow: hidden;
+        }
+        </style>
+        </head>`;
     const body =
-    `<body>
-    <script src="${scriptUri1}"></script>
-    <script src="${scriptUri2}"></script>
-    <script src="${scriptUriL1}"></script>
-    <script src="${scriptUriL2}"></script>
-    <script src="${scriptUri4}"></script>
-    <script src="${scriptUri5}"></script>
-    <script>
-      var load_path="${docPath}";
-    </script>
-    <script src="${scriptUri6}"></script>
-    </body>`;
+      `<body>
+      <div id="view">
+      </div>
+      <script src="${scriptUri1}"></script>
+        <script src="${scriptUri2}"></script>
+        <script src="${scriptUriL1}"></script>
+        <script src="${scriptUriL2}"></script>
+        <script src="${scriptUri4}"></script>
+        <script src="${scriptUri5}"></script>
+        <script>
+          var load_path="${docPath}";
+          const point_max_size = "${pointMaxSize}";
+          const bg_color = "${bgColor}";
+          const point_default_size = ${pointDefaultSize};
+          const use_gridhelper = ${useGridHelper}
+        </script>
+        <script src="${scriptUri6}"></script>
+      </body>`;
 
     return "<!DOCTYPE html>\n<html dir='ltr' mozdisallowselectionprint>\n" + head + body + "</html>\n";
   }

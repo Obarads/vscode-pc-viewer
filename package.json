@@ -37,7 +37,32 @@
 				"aliases": ["point cloud data","pcd"],
 				"extensions": [".pcd"]
 			}
-		]
+		],
+		"configuration": {
+			"title": "pcviewer for vscode",
+			"properties": {
+				"pcviewer.pointMaxSize": {
+					"type": "number",
+					"default": 2,
+					"description": "Set point max size for gui."
+				},
+				"pcviewer.pointDefaultSize": {
+					"type": "number",
+					"default": 0.05,
+					"description": "Set point default size."
+				},
+				"pcviewer.useGridHelper": {
+					"type": "boolean",
+					"default": true,
+					"description": "use gridhelper."
+				},
+				"pcviewer.bgColor": {
+					"type": "string",
+					"default": "#0b1447",
+					"description": "Set background color."
+				}
+			}
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
