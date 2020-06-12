@@ -20,31 +20,28 @@
 		"url": "https://github.com/Obarads/vscode-pc-viewer.git"
 	},
 	"activationEvents": [
-		"onLanguage:pcd",
-		"onLanguage:ply",
-		"onWebviewPanel:pcviewer.panel"
+		"onCustomEditor:pcviewer.pcd.viewer",
+		"onCustomEditor:pcviewer.ply.viewer"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-		"languages": [
+		"customEditors": [
 			{
-				"id": "ply",
-				"aliases": [
-					"Polygon File Format",
-					"ply"
-				],
-				"extensions": [
-					".ply"
+				"viewType": "pcviewer.pcd.viewer",
+				"displayName": "pcd viewer",
+				"selector": [
+					{
+						"filenamePattern": "*.pcd"
+					}
 				]
 			},
 			{
-				"id": "pcd",
-				"aliases": [
-					"point cloud data",
-					"pcd"
-				],
-				"extensions": [
-					".pcd"
+				"viewType": "pcviewer.ply.viewer",
+				"displayName": "ply viewer",
+				"selector": [
+					{
+						"filenamePattern": "*.ply"
+					}
 				]
 			}
 		],
@@ -83,16 +80,16 @@
 		"test": "node ./out/test/runTest.js"
 	},
 	"devDependencies": {
-		"@types/vscode": "^1.44.0",
-		"@types/glob": "^7.1.1",
+		"@types/vscode": "^1.46.0",
+		"@types/glob": "^7.1.2",
 		"@types/mocha": "^7.0.2",
-		"@types/node": "^13.11.0",
-		"eslint": "^6.8.0",
-		"@typescript-eslint/parser": "^2.26.0",
-		"@typescript-eslint/eslint-plugin": "^2.26.0",
+		"@types/node": "^14.0.13",
+		"eslint": "^7.2.0",
+		"@typescript-eslint/parser": "^3.2.0",
+		"@typescript-eslint/eslint-plugin": "^3.2.0",
 		"glob": "^7.1.6",
-		"mocha": "^7.1.1",
-		"typescript": "^3.8.3",
-		"vscode-test": "^1.3.0"
+		"mocha": "^8.0.1",
+		"typescript": "^3.9.5",
+		"vscode-test": "^1.4.0"
 	}
 }
