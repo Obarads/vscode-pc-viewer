@@ -7,13 +7,9 @@ This extension allows displaying the point cloud of a file in a vscode window. T
 
 ![fig1](img/fig1.png)
 
-## Configs
-The following configs specify default values of this extension.
-
-- `pcviewer.pointMaxSize` (number, 2.0): set max size of points on gui
-- `pcviewer.pointDefaultSize` (number, 0.05): set default size of points
-- `pcviewer.useGridHelper` (bool, true): use gridhelper
-- `pcviewer.bgColor` (string, #0b1447): set a background color.
+## Note
+### Axis Helper
+The X axis is red. The Y axis is green. The Z axis is blue.
 
 ## References
 1. [Microsoft. vscode-extension-samples. https://github.com/microsoft/vscode-extension-samples, Accessed: 2020-04-23.](https://github.com/microsoft/vscode-extension-samples)

@@ -15,11 +15,14 @@ export function getEditorInfo(){
 
 	const pcviewerResource = vscode.workspace.getConfiguration('pcviewer', resource);
 	const pointMaxSize = pcviewerResource.get('pointMaxSize');
-    const bgColor = pcviewerResource.get('bgColor');
+    const backgroundColor = pcviewerResource.get('backgroundColor');
     const pointDefaultSize = pcviewerResource.get('pointDefaultSize');
-    const useGridHelper = pcviewerResource.get('useGridHelper');
+	const displayGridHelper = pcviewerResource.get('displayGridHelper');
+	const pointDefaultColor = pcviewerResource.get('pointDefaultColor');
+	const reverseCoordinate = pcviewerResource.get("reverseCoordinate");
+	const rotateCoordinate = pcviewerResource.get("rotateCoordinate");
 
-	return {pointMaxSize, bgColor, pointDefaultSize, useGridHelper};
+	return {pointMaxSize, backgroundColor, pointDefaultSize, displayGridHelper, pointDefaultColor, reverseCoordinate, rotateCoordinate};
 }
 
 

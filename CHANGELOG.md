@@ -5,3 +5,6 @@
 
 ## 0.4.0
 - introduced vscode custom editor api.
+
+## 0.5.0
+- adds object reversing and rotation for display.

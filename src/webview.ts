@@ -6,26 +6,46 @@ import { getEditorInfo } from './utils';
 export const getViewer = (uri: vscode.Uri, webview: vscode.Webview, context: vscode.ExtensionContext): any => {
 	// Local path to script and css for the webview
 	const docPath = webview.asWebviewUri(uri);
-	const s_three = webview.asWebviewUri(vscode.Uri.file(
+	const threeJS = webview.asWebviewUri(vscode.Uri.file(
 		path.join(context.extensionPath, 'lib', 'three', 'three.min.js')
 	));
-	const s_oc = webview.asWebviewUri(vscode.Uri.file(
+	const orbitControlsJS = webview.asWebviewUri(vscode.Uri.file(
 		path.join(context.extensionPath, 'lib', 'three', 'OrbitControls.js')
 	));
-	const s_gui = webview.asWebviewUri(vscode.Uri.file(
+	const datGuiJS = webview.asWebviewUri(vscode.Uri.file(
 		path.join(context.extensionPath, 'lib', 'three', 'dat.gui.min.js')
 	));
-	const s_plyl = webview.asWebviewUri(vscode.Uri.file(
+	const plyLoaderJS = webview.asWebviewUri(vscode.Uri.file(
 		path.join(context.extensionPath, 'lib', 'three', 'loaders', 'PLYLoader.js')
 	));
-	const s_pcdl = webview.asWebviewUri(vscode.Uri.file(
+	const pcdLoaderJS = webview.asWebviewUri(vscode.Uri.file(
 		path.join(context.extensionPath, 'lib', 'three', 'loaders', 'PCDLoader.js')
 	));
-	const s_view = webview.asWebviewUri(vscode.Uri.file(
-		path.join(context.extensionPath, 'lib', 'view.js')
+	// const trackballControlsJS = webview.asWebviewUri(vscode.Uri.file(
+	// 	path.join(context.extensionPath, 'lib', 'three', 'TrackballControls.js')
+	// ));
+	const statsJS = webview.asWebviewUri(vscode.Uri.file(
+		path.join(context.extensionPath, 'lib', 'three', 'stats.min.js')
+	));
+	const viewerJS = webview.asWebviewUri(vscode.Uri.file(
+		path.join(context.extensionPath, 'lib', 'viewer.js')
+	));
+	const controlsJS = webview.asWebviewUri(vscode.Uri.file(
+		path.join(context.extensionPath, 'lib', 'controls.js')
+	));
+	const effectsJS = webview.asWebviewUri(vscode.Uri.file(
+		path.join(context.extensionPath, 'lib', 'effects.js')
+	));
+	const guiJS= webview.asWebviewUri(vscode.Uri.file(
+		path.join(context.extensionPath, 'lib', 'gui.js')
+	));
+	const objectsJS = webview.asWebviewUri(vscode.Uri.file(
+		path.join(context.extensionPath, 'lib', 'objects.js')
 	));
 
-	const {pointMaxSize, bgColor, pointDefaultSize, useGridHelper} = getEditorInfo();
+
+	const {pointMaxSize, backgroundColor, pointDefaultSize, displayGridHelper, 
+		pointDefaultColor, reverseCoordinate, rotateCoordinate} = getEditorInfo();
 
 	// Use a nonce to whitelist which scripts can be run
 	// const nonce = getNonce();
@@ -49,19 +69,27 @@ export const getViewer = (uri: vscode.Uri, webview: vscode.Webview, context: vsc
 	`<body>
 	<div id="view">
 	</div>
-	<script src="${s_three}"></script>
-	<script src="${s_pcdl}"></script>
-	<script src="${s_plyl}"></script>
-	<script src="${s_gui}"></script>
-	<script src="${s_oc}"></script>
+	<script src="${threeJS}"></script>
+	<script src="${orbitControlsJS}"></script>
+	<script src="${datGuiJS}"></script>
+	<script src="${plyLoaderJS}"></script>
+	<script src="${pcdLoaderJS}"></script>
+	<script src="${statsJS}"></script>
 	<script>
-		var load_path="${docPath}";
-		const point_max_size = "${pointMaxSize}";
-		const bg_color = "${bgColor}";
-		const point_default_size = ${pointDefaultSize};
-		const use_gridhelper = ${useGridHelper};
+		const loadPath="${docPath}";
+		const pointMaxSize = "${pointMaxSize}";
+		const backgroundColor = "${backgroundColor}";
+		const pointDefaultSize = ${pointDefaultSize};
+		const displayGridHelper = ${displayGridHelper};
+		const pointDefaultColor = "${pointDefaultColor}";
+		const reverseCoordinate = [${reverseCoordinate}];
+		const rotateCoordinate = [${rotateCoordinate}];
 	</script>
-	<script src="${s_view}"></script>
+	<script src="${controlsJS}"></script>
+	<script src="${effectsJS}"></script>
+	<script src="${guiJS}"></script>
+	<script src="${objectsJS}"></script>
+	<script src="${viewerJS}"></script>
 	</body>`;
 
 	return "<!DOCTYPE html>\n<html dir='ltr' mozdisallowselectionprint>\n" + head + body + "</html>\n";

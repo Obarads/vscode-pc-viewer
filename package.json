@@ -50,23 +50,38 @@
 			"properties": {
 				"pcviewer.pointMaxSize": {
 					"type": "number",
-					"default": 2,
-					"description": "Set point max size for gui."
+					"default": 0.08,
+					"description": "Set max size of points on gui."
 				},
 				"pcviewer.pointDefaultSize": {
 					"type": "number",
 					"default": 0.05,
-					"description": "Set point default size."
+					"description": "Set default size of points."
 				},
-				"pcviewer.useGridHelper": {
+				"pcviewer.displayGridHelper": {
 					"type": "boolean",
 					"default": true,
-					"description": "use gridhelper."
+					"description": "display gridhelper."
 				},
-				"pcviewer.bgColor": {
+				"pcviewer.backgroundColor": {
 					"type": "string",
 					"default": "#0b1447",
-					"description": "Set background color."
+					"description": "Set a background color."
+				},
+				"pcviewer.pointDefaultColor":{
+					"type": "string",
+					"default": "#ffffff",
+					"description": "Set a point color (if point cloud don't have the each point color)."
+				},
+				"pcviewer.reverseCoordinate":{
+					"type": "array",
+					"default": [false, false, false],
+					"description": "Reverse coordinate."
+				},
+				"pcviewer.rotateCoordinate": {
+					"type": "array",
+					"default": [0, 0, 0],
+					"description": "Rotate coordinate."
 				}
 			}
 		}
