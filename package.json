@@ -2,7 +2,7 @@
 	"name": "vscode-pc-viewer",
 	"displayName": "vscode-pc-viewer",
 	"description": "Display points of a file.",
-	"version": "0.4.0",
+	"version": "0.5.0",
 	"publisher": "obarads",
 	"engines": {
 		"vscode": "^1.46.0"
@@ -68,19 +68,27 @@
 					"default": "#0b1447",
 					"description": "Set a background color."
 				},
-				"pcviewer.pointDefaultColor":{
+				"pcviewer.pointDefaultColor": {
 					"type": "string",
 					"default": "#ffffff",
 					"description": "Set a point color (if point cloud don't have the each point color)."
 				},
-				"pcviewer.reverseCoordinate":{
+				"pcviewer.reverseCoordinate": {
 					"type": "array",
-					"default": [false, false, false],
+					"default": [
+						false,
+						false,
+						false
+					],
 					"description": "Reverse coordinate."
 				},
 				"pcviewer.rotateCoordinate": {
 					"type": "array",
-					"default": [0, 0, 0],
+					"default": [
+						0,
+						0,
+						0
+					],
 					"description": "Rotate coordinate."
 				}
 			}
