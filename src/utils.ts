@@ -21,8 +21,9 @@ export function getEditorInfo(){
 	const pointDefaultColor = pcviewerResource.get('pointDefaultColor');
 	const reverseCoordinate = pcviewerResource.get("reverseCoordinate");
 	const rotateCoordinate = pcviewerResource.get("rotateCoordinate");
+	const viewPoint = pcviewerResource.get("viewPoint");
 
-	return {pointMaxSize, backgroundColor, pointDefaultSize, displayGridHelper, pointDefaultColor, reverseCoordinate, rotateCoordinate};
+	return {pointMaxSize, backgroundColor, pointDefaultSize, displayGridHelper, pointDefaultColor, reverseCoordinate, rotateCoordinate, viewPoint};
 }
 
 

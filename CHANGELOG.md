@@ -16,3 +16,7 @@
 
 ### Thank you
 - @YunzeMan proposed new features ([#1](https://github.com/Obarads/vscode-pc-viewer/issues/1)).
+
+## 0.6.0 (2020/07/07)
+- Adds default viewpoint selector and support `.bin` for KITTI dataset
+

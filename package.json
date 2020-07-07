@@ -21,7 +21,8 @@
 	},
 	"activationEvents": [
 		"onCustomEditor:pcviewer.pcd.viewer",
-		"onCustomEditor:pcviewer.ply.viewer"
+		"onCustomEditor:pcviewer.ply.viewer",
+		"onCustomEditor:pcviewer.bin.viewer"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -41,6 +42,15 @@
 				"selector": [
 					{
 						"filenamePattern": "*.ply"
+					}
+				]
+			},
+			{
+				"viewType": "pcviewer.bin.viewer",
+				"displayName": "bin viewer",
+				"selector": [
+					{
+						"filenamePattern": "*.bin"
 					}
 				]
 			}
@@ -72,6 +82,11 @@
 					"type": "string",
 					"default": "#ffffff",
 					"description": "Set a point color (if point cloud don't have the each point color)."
+				},
+				"pcviewer.viewPoint": {
+					"type": "boolean",
+					"default": false,
+					"description": "Use auto default viewpoint."
 				},
 				"pcviewer.reverseCoordinate": {
 					"type": "array",
