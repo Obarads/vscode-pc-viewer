@@ -22,7 +22,8 @@
 	"activationEvents": [
 		"onCustomEditor:pcviewer.pcd.viewer",
 		"onCustomEditor:pcviewer.ply.viewer",
-		"onCustomEditor:pcviewer.bin.viewer"
+		"onCustomEditor:pcviewer.bin.viewer",
+		"onCustomEditor:pcviewer.npy.viewer"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -51,6 +52,15 @@
 				"selector": [
 					{
 						"filenamePattern": "*.bin"
+					}
+				]
+			},
+			{
+				"viewType": "pcviewer.npy.viewer",
+				"displayName": "npy viewer",
+				"selector": [
+					{
+						"filenamePattern": "*.npy"
 					}
 				]
 			}
@@ -105,6 +115,11 @@
 						0
 					],
 					"description": "Rotate coordinate."
+				},
+				"pcviewer.fileNumChannels": {
+					"type": "integer",
+					"default": 7,
+					"description": "for npy file dimentions"
 				}
 			}
 		}
@@ -118,16 +133,16 @@
 		"test": "node ./out/test/runTest.js"
 	},
 	"devDependencies": {
-		"@types/vscode": "^1.46.0",
-		"@types/glob": "^7.1.2",
-		"@types/mocha": "^7.0.2",
-		"@types/node": "^14.0.13",
-		"eslint": "^7.2.0",
-		"@typescript-eslint/parser": "^3.2.0",
-		"@typescript-eslint/eslint-plugin": "^3.2.0",
+		"@types/vscode": "^1.47.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.0",
+		"@types/node": "^14.0.24",
+		"eslint": "^7.5.0",
+		"@typescript-eslint/parser": "^3.7.0",
+		"@typescript-eslint/eslint-plugin": "^3.7.0",
 		"glob": "^7.1.6",
 		"mocha": "^8.0.1",
-		"typescript": "^3.9.5",
+		"typescript": "^3.9.7",
 		"vscode-test": "^1.4.0"
 	}
 }

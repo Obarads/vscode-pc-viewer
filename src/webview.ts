@@ -45,7 +45,8 @@ export const getViewer = (uri: vscode.Uri, webview: vscode.Webview, context: vsc
 
 
 	const {pointMaxSize, backgroundColor, pointDefaultSize, displayGridHelper, 
-		pointDefaultColor, reverseCoordinate, rotateCoordinate, viewPoint} = getEditorInfo();
+		pointDefaultColor, reverseCoordinate, rotateCoordinate, viewPoint, 
+		fileNumChannels} = getEditorInfo();
 
 	// Use a nonce to whitelist which scripts can be run
 	// const nonce = getNonce();
@@ -85,6 +86,7 @@ export const getViewer = (uri: vscode.Uri, webview: vscode.Webview, context: vsc
 		const reverseCoordinate = [${reverseCoordinate}];
 		const rotateCoordinate = [${rotateCoordinate}];
 		const viewPoint = ${viewPoint};
+		const fileNumChannels = ${fileNumChannels};
 	</script>
 	<script src="${controlsJS}"></script>
 	<script src="${effectsJS}"></script>

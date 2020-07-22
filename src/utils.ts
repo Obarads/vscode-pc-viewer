@@ -22,8 +22,9 @@ export function getEditorInfo(){
 	const reverseCoordinate = pcviewerResource.get("reverseCoordinate");
 	const rotateCoordinate = pcviewerResource.get("rotateCoordinate");
 	const viewPoint = pcviewerResource.get("viewPoint");
+	const fileNumChannels = pcviewerResource.get("fileNumChannels");
 
-	return {pointMaxSize, backgroundColor, pointDefaultSize, displayGridHelper, pointDefaultColor, reverseCoordinate, rotateCoordinate, viewPoint};
+	return {pointMaxSize, backgroundColor, pointDefaultSize, displayGridHelper, pointDefaultColor, reverseCoordinate, rotateCoordinate, viewPoint, fileNumChannels};
 }
 
 
