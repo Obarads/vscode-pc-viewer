@@ -22,15 +22,14 @@
 	"activationEvents": [
 		"onCustomEditor:pcviewer.pcd.viewer",
 		"onCustomEditor:pcviewer.ply.viewer",
-		"onCustomEditor:pcviewer.bin.viewer",
-		"onCustomEditor:pcviewer.npy.viewer"
+		"onCustomEditor:pcviewer.bin.viewer"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"customEditors": [
 			{
 				"viewType": "pcviewer.pcd.viewer",
-				"displayName": "pcd viewer",
+				"displayName": "pcd pc viewer",
 				"selector": [
 					{
 						"filenamePattern": "*.pcd"
@@ -39,7 +38,7 @@
 			},
 			{
 				"viewType": "pcviewer.ply.viewer",
-				"displayName": "ply viewer",
+				"displayName": "ply pc viewer",
 				"selector": [
 					{
 						"filenamePattern": "*.ply"
@@ -48,19 +47,10 @@
 			},
 			{
 				"viewType": "pcviewer.bin.viewer",
-				"displayName": "bin viewer",
+				"displayName": "bin pc viewer",
 				"selector": [
 					{
 						"filenamePattern": "*.bin"
-					}
-				]
-			},
-			{
-				"viewType": "pcviewer.npy.viewer",
-				"displayName": "npy viewer",
-				"selector": [
-					{
-						"filenamePattern": "*.npy"
 					}
 				]
 			}
@@ -133,16 +123,16 @@
 		"test": "node ./out/test/runTest.js"
 	},
 	"devDependencies": {
-		"@types/vscode": "^1.47.0",
+		"@types/vscode": "^1.48.0",
 		"@types/glob": "^7.1.3",
-		"@types/mocha": "^8.0.0",
-		"@types/node": "^14.0.24",
-		"eslint": "^7.5.0",
-		"@typescript-eslint/parser": "^3.7.0",
-		"@typescript-eslint/eslint-plugin": "^3.7.0",
+		"@types/mocha": "^8.0.3",
+		"@types/node": "^14.6.4",
+		"eslint": "^7.8.1",
+		"@typescript-eslint/parser": "^4.0.1",
+		"@typescript-eslint/eslint-plugin": "^4.0.1",
 		"glob": "^7.1.6",
-		"mocha": "^8.0.1",
-		"typescript": "^3.9.7",
+		"mocha": "^8.1.3",
+		"typescript": "^4.0.2",
 		"vscode-test": "^1.4.0"
 	}
 }
