@@ -26,6 +26,11 @@
 	],
 	"main": "./out/extension.js",
 	"contributes": {
+		"capabilities": {
+			"untrustedWorkspaces": {
+				"supported": true
+			}
+		},
 		"customEditors": [
 			{
 				"viewType": "pcviewer.pcd.viewer",

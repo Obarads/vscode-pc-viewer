@@ -6,7 +6,6 @@ import {
 // 	regist_ViewerProviderCRE
 // } from './test/viewerProvider'
 
-
 export function activate(context: vscode.ExtensionContext) {
 	// Register our custom editor provider
 	
