@@ -20,3 +20,5 @@
 ## 0.6.0 (2020/07/07)
 - Adds default viewpoint selector and support `.bin` for KITTI dataset
 
+## 0.6.1 (2021/09/18)
+- Update logo.
