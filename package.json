@@ -14,7 +14,7 @@
 		"point cloud",
 		"viewer"
 	],
-	"icon": "logo.png",
+	"icon": "img/logo.png",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/Obarads/vscode-pc-viewer.git"
@@ -141,5 +141,8 @@
 		"typescript": "^4.4.3",
 		"vscode-test": "^1.6.1",
 		"yo": "^4.3.0"
+	},
+	"resolutions": {
+		"@typescript-eslint/typescript-estree": "5.9.0"
 	}
 }

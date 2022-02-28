@@ -37,15 +37,15 @@ export const getViewer = (uri: vscode.Uri, webview: vscode.Webview, context: vsc
         path.join(context.extensionPath, 'lib', 'objects.js')
     ));
 
-    const {pointMaxSize, backgroundColor, pointDefaultSize, displayGridHelper, 
-        pointDefaultColor, reverseCoordinate, rotateCoordinate, viewPoint, 
-        fileNumChannels} = getEditorInfo();
+    const { pointMaxSize, backgroundColor, pointDefaultSize, displayGridHelper,
+        pointDefaultColor, reverseCoordinate, rotateCoordinate, viewPoint,
+        fileNumChannels } = getEditorInfo();
 
     // Use a nonce to whitelist which scripts can be run
     // const nonce = getNonce();
 
     const head =
-    `<head>
+        `<head>
     <title>three.js webgl - PLY</title>
     <meta charset="utf-8">
     <style>
@@ -72,7 +72,7 @@ export const getViewer = (uri: vscode.Uri, webview: vscode.Webview, context: vsc
     </style>
     </head>`;
     const body =
-    `<body>
+        `<body>
     <div id="axes">
     </div>
     <div id="view">
@@ -101,7 +101,4 @@ export const getViewer = (uri: vscode.Uri, webview: vscode.Webview, context: vsc
     </body>`;
 
     return "<!DOCTYPE html>\n<html dir='ltr' mozdisallowselectionprint>\n" + head + body + "</html>\n";
-}
-//
-// ViewerProviderCE
-//
+};
