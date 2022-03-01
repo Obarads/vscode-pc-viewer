@@ -2,7 +2,7 @@
 	"name": "vscode-pc-viewer",
 	"displayName": "vscode-pc-viewer",
 	"description": "Display points of a file.",
-	"version": "0.6.1",
+	"version": "0.7.0",
 	"publisher": "obarads",
 	"engines": {
 		"vscode": "^1.60.0"
