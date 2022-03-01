@@ -31,9 +31,19 @@ export const getViewer = (uri: vscode.Uri, webview: vscode.Webview, context: vsc
         path.join(context.extensionPath, 'lib', 'objects.js')
     ));
 
-    const { pointMaxSize, backgroundColor, pointDefaultSize, displayGridHelper,
-        pointDefaultColor, reverseCoordinate, rotateCoordinate, viewPoint,
-        fileNumChannels } = getEditorInfo();
+    const {
+        pointMaxSize,
+        backgroundColor,
+        pointDefaultSize,
+        displayGridHelper,
+        gridSize,
+        autoGridSize,
+        pointDefaultColor,
+        reverseCoordinate,
+        rotateCoordinate,
+        viewPoint,
+        fileNumChannels
+    } = getEditorInfo();
 
     // Use a nonce to whitelist which scripts can be run
     // const nonce = getNonce();
@@ -84,6 +94,8 @@ export const getViewer = (uri: vscode.Uri, webview: vscode.Webview, context: vsc
         const backgroundColor = "${backgroundColor}";
         const pointDefaultSize = ${pointDefaultSize};
         const displayGridHelper = ${displayGridHelper};
+        const gridSize = [${gridSize}];
+        const autoGridSize = ${autoGridSize};
         const pointDefaultColor = "${pointDefaultColor}";
         const reverseCoordinate = [${reverseCoordinate}];
         const rotateCoordinate = [${rotateCoordinate}];
