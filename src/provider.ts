@@ -1,13 +1,11 @@
-import * as path from 'path';
-import * as vscode from 'vscode';
-import { getNonce } from './utils';
-import { Disposable, disposeAll } from './dispose';
-import { getViewer } from './webview'
+import * as vscode from "vscode";
+import { Disposable, disposeAll } from "./dispose";
+import { getViewer } from "./webview";
 
-export const regist_TDEditorProvider = (context: vscode.ExtensionContext, viewType: string): any  => {
+export const registTDEditorProvider = (context: vscode.ExtensionContext, viewType: string): any => {
 	const provider = new TDEditorProvider(context, viewType);
 	const providerRegistration = vscode.window.registerCustomEditorProvider(
-		viewType, 
+		viewType,
 		provider,
 		{
 			// For this demo extension, we enable `retainContextWhenHidden` which keeps the 
@@ -18,8 +16,8 @@ export const regist_TDEditorProvider = (context: vscode.ExtensionContext, viewTy
 			},
 			supportsMultipleEditorsPerDocument: false,
 		});
-	return providerRegistration
-}
+	return providerRegistration;
+};
 
 /**
  * Define the type of edits used in paw draw files.

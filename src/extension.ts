@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
-import { 
-	regist_TDEditorProvider
+import {
+	registTDEditorProvider
 } from './provider';
 // import {
 // 	regist_ViewerProviderCRE
@@ -8,13 +8,13 @@ import {
 
 export function activate(context: vscode.ExtensionContext) {
 	// Register our custom editor provider
-	
+
 	context.subscriptions.push(
-		regist_TDEditorProvider(context, "pcviewer.ply.viewer"),
-		regist_TDEditorProvider(context, "pcviewer.pcd.viewer"),
-		regist_TDEditorProvider(context, "pcviewer.bin.viewer"),
-		// regist_TDEditorProvider(context, "pcviewer.obj.viewer"),
-		// regist_TDEditorProvider(context, "pcviewer.npy.viewer"),
+		registTDEditorProvider(context, "pcviewer.ply.viewer"),
+		registTDEditorProvider(context, "pcviewer.pcd.viewer"),
+		registTDEditorProvider(context, "pcviewer.bin.viewer"),
+		// registTDEditorProvider(context, "pcviewer.obj.viewer"),
+		// registTDEditorProvider(context, "pcviewer.npy.viewer"),
 	);
 }
 

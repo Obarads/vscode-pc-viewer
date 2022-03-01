@@ -22,3 +22,11 @@
 
 ## 0.6.1 (2021/09/18)
 - Update logo.
+
+## 0.7.0 (2022/03/01)
+- add features
+  - Mini window for Axis Helper
+  - GridHelper
+    - display dipending on view direction
+    - Moving GridHelper along Axis
+- fix view rotation

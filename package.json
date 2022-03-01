@@ -2,7 +2,7 @@
 	"name": "vscode-pc-viewer",
 	"displayName": "vscode-pc-viewer",
 	"description": "Display points of a file.",
-	"version": "0.6.1",
+	"version": "0.7.0",
 	"publisher": "obarads",
 	"engines": {
 		"vscode": "^1.60.0"
@@ -14,7 +14,7 @@
 		"point cloud",
 		"viewer"
 	],
-	"icon": "logo.png",
+	"icon": "img/logo.png",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/Obarads/vscode-pc-viewer.git"
@@ -66,32 +66,46 @@
 				"pcviewer.pointMaxSize": {
 					"type": "number",
 					"default": 0.08,
-					"description": "Set max size of points on gui."
+					"description": "max size of points on gui."
 				},
 				"pcviewer.pointDefaultSize": {
 					"type": "number",
 					"default": 0.05,
-					"description": "Set default size of points."
+					"description": "default size of points."
 				},
 				"pcviewer.displayGridHelper": {
 					"type": "boolean",
 					"default": true,
 					"description": "display gridhelper."
 				},
+				"pcviewer.gridSize": {
+					"type": "array",
+					"default": [
+						0.1,
+						0.1,
+						0.1
+					],
+					"description": "xyz grid size of gridhelper."
+				},
+				"pcviewer.autoGridSize": {
+					"type": "boolean",
+					"default": false,
+					"description": "automation for xyz grid size (beta)"
+				},
 				"pcviewer.backgroundColor": {
 					"type": "string",
 					"default": "#0b1447",
-					"description": "Set a background color."
+					"description": "a background color."
 				},
 				"pcviewer.pointDefaultColor": {
 					"type": "string",
 					"default": "#ffffff",
-					"description": "Set a point color (if point cloud don't have the each point color)."
+					"description": "a point color (if point cloud don't have the each point color)."
 				},
 				"pcviewer.viewPoint": {
 					"type": "boolean",
 					"default": false,
-					"description": "Use auto default viewpoint."
+					"description": "automation for default viewpoint."
 				},
 				"pcviewer.reverseCoordinate": {
 					"type": "array",
@@ -141,5 +155,8 @@
 		"typescript": "^4.4.3",
 		"vscode-test": "^1.6.1",
 		"yo": "^4.3.0"
+	},
+	"resolutions": {
+		"@typescript-eslint/typescript-estree": "5.9.0"
 	}
 }
