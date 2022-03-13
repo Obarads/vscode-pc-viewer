@@ -2,7 +2,7 @@
 	"name": "vscode-pc-viewer",
 	"displayName": "vscode-pc-viewer",
 	"description": "Display points of a file.",
-	"version": "0.7.0",
+	"version": "0.8.0",
 	"publisher": "obarads",
 	"engines": {
 		"vscode": "^1.60.0"
@@ -90,7 +90,7 @@
 				"pcviewer.autoGridSize": {
 					"type": "boolean",
 					"default": false,
-					"description": "automation for xyz grid size (beta)"
+					"description": "automation for xyz grid size"
 				},
 				"pcviewer.backgroundColor": {
 					"type": "string",

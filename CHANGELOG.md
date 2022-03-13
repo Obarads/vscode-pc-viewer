@@ -30,3 +30,9 @@
     - display dipending on view direction
     - Moving GridHelper along Axis
 - fix view rotation
+
+## 0.8.0 (2022/03/13)
+- add features
+  - display meshes (ply file only)
+  - auto grid size
+
