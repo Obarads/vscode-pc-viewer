@@ -18,6 +18,12 @@ export const getViewer = (uri: vscode.Uri, webview: vscode.Webview, context: vsc
     const girdhelperJS = webview.asWebviewUri(vscode.Uri.file(
         path.join(context.extensionPath, 'lib', 'three', 'gridhelper.js')
     ));
+    const fontLoaderJS = webview.asWebviewUri(vscode.Uri.file(
+        path.join(context.extensionPath, 'lib', 'three', 'loaders', 'FontLoader.js')
+    ));
+    const fontJSON = webview.asWebviewUri(vscode.Uri.file(
+        path.join(context.extensionPath, 'lib', 'three', 'fonts', 'helvetiker_regular.typeface.json')
+    ));
     const plyLoaderJS = webview.asWebviewUri(vscode.Uri.file(
         path.join(context.extensionPath, 'lib', 'three', 'loaders', 'PLYLoader.js')
     ));
@@ -84,11 +90,13 @@ export const getViewer = (uri: vscode.Uri, webview: vscode.Webview, context: vsc
     <script src="${threeJS}"></script>
     <script src="${orbitControlsJS}"></script>
     <script src="${datGuiJS}"></script>
+    <script src="${fontLoaderJS}"></script>
     <script src="${plyLoaderJS}"></script>
     <script src="${pcdLoaderJS}"></script>
     <script src="${girdhelperJS}"></script>
     <script src="${statsJS}"></script>
     <script>
+        const fontjson_path="${fontJSON}";
         const loadPath="${docPath}";
         const pointMaxSize = "${pointMaxSize}";
         const backgroundColor = "${backgroundColor}";

@@ -2,7 +2,7 @@
 ## About
 This vscode extension with three.js [2] allows displaying a point cloud of a file. This extension supports the following formats:
 
-- `ply` : Polygon File Format [3]
+- `ply` : Polygon File Format [3] (displaying meshes is available)
 - `pcd` : Point Cloud Data [4]
 - `bin` : binary file for KITTI dataset [1]
 
