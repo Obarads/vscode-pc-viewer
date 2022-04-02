@@ -36,3 +36,6 @@
   - display meshes (ply file only)
   - auto grid size
 
+## 0.9.0 (2022/04/02)
+- add features
+  - support additional point cloud formats (obj, xyz)

@@ -22,7 +22,9 @@
 	"activationEvents": [
 		"onCustomEditor:pcviewer.pcd.viewer",
 		"onCustomEditor:pcviewer.ply.viewer",
-		"onCustomEditor:pcviewer.bin.viewer"
+		"onCustomEditor:pcviewer.bin.viewer",
+		"onCustomEditor:pcviewer.obj.viewer",
+		"onCustomEditor:pcviewer.xyz.viewer"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -56,6 +58,24 @@
 				"selector": [
 					{
 						"filenamePattern": "*.bin"
+					}
+				]
+			},
+			{
+				"viewType": "pcviewer.obj.viewer",
+				"displayName": "obj pc viewer",
+				"selector": [
+					{
+						"filenamePattern": "*.obj"
+					}
+				]
+			},
+			{
+				"viewType": "pcviewer.xyz.viewer",
+				"displayName": "xyz pc viewer",
+				"selector": [
+					{
+						"filenamePattern": "*.xyz"
 					}
 				]
 			}
@@ -124,11 +144,6 @@
 						0
 					],
 					"description": "Rotate coordinate."
-				},
-				"pcviewer.fileNumChannels": {
-					"type": "integer",
-					"default": 7,
-					"description": "for npy file dimentions"
 				}
 			}
 		}

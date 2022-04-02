@@ -30,6 +30,12 @@ export const getViewer = (uri: vscode.Uri, webview: vscode.Webview, context: vsc
     const pcdLoaderJS = webview.asWebviewUri(vscode.Uri.file(
         path.join(context.extensionPath, 'lib', 'three', 'loaders', 'PCDLoader.js')
     ));
+    const objLoaderJS = webview.asWebviewUri(vscode.Uri.file(
+        path.join(context.extensionPath, 'lib', 'three', 'loaders', 'OBJLoader.js')
+    ));
+    const xyzLoaderJS = webview.asWebviewUri(vscode.Uri.file(
+        path.join(context.extensionPath, 'lib', 'three', 'loaders', 'XYZLoader.js')
+    ));
     const statsJS = webview.asWebviewUri(vscode.Uri.file(
         path.join(context.extensionPath, 'lib', 'three', 'stats.min.js')
     ));
@@ -93,6 +99,8 @@ export const getViewer = (uri: vscode.Uri, webview: vscode.Webview, context: vsc
     <script src="${fontLoaderJS}"></script>
     <script src="${plyLoaderJS}"></script>
     <script src="${pcdLoaderJS}"></script>
+    <script src="${objLoaderJS}"></script>
+    <script src="${xyzLoaderJS}"></script>
     <script src="${girdhelperJS}"></script>
     <script src="${statsJS}"></script>
     <script>
