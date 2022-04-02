@@ -39,3 +39,6 @@
 ## 0.9.0 (2022/04/02)
 - add features
   - support additional point cloud formats (obj, xyz)
+
+## 0.9.1 (2022/04/03)
+- fix bin loader
