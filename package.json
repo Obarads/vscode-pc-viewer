@@ -164,12 +164,12 @@
 		"@typescript-eslint/eslint-plugin": "^4.31.1",
 		"@typescript-eslint/parser": "^4.31.1",
 		"eslint": "^7.32.0",
-		"generator-code": "^1.6.0",
+		"generator-code": "^1.11.18",
 		"glob": "^7.1.7",
 		"mocha": "^9.2.2",
 		"typescript": "^4.4.3",
 		"vscode-test": "^1.6.1",
-		"yo": "^4.3.1"
+		"yo": "^7.0.1"
 	},
 	"resolutions": {
 		"@typescript-eslint/typescript-estree": "5.9.0"
